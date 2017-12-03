@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" >
+                <table class="table  table-responsive table-hover" >
+                    <caption> <h1>Autorzy systemu predykcji</h1></caption>
+
+                    <thead>
+                        <tr>
+                            <th>Imię</th>
+                            <th>Nazwisko</th>
+                            <th>Numer indeksu</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="clickable" data-toggle="collapse" id="row1" data-target=".row1">
+                            <td>Dariusz</td>
+                            <td>Asztemborski</td>
+                            <td>155021</td>
+                        </tr>
+                        <tr class = "collapsedRow collapse row1" >
+                            <td colspan="3" >tu można napisac cos o sobie jakies pierdoły itp ssssssssssssssssssssssssssssssssssssssssssss</td>
+                        </tr>
+                        
+
+                        <tr class="clickable" data-toggle="collapse" id="row1" data-target=".row2">
+                            <td>Jan</td>
+                            <td>Dąbrowski</td>
+                            <td>155055</td>
+                        </tr>
+                        <tr class="collapsedRow collapse row2">
+                            <td colspan="3">tu można napisac cos o sobie jakies pierdoły itp</td>
+                        </tr>
+
+                        <tr class="clickable" data-toggle="collapse" id="row1" data-target=".row3">
+                            <td>Mikołaj</td>
+                            <td>Szotowicz</td>
+                            <td>155208</td>
+                        </tr>
+                        <tr class="collapsedRow collapse row3">
+                            <td colspan="3">tu można napisac cos o sobie jakies pierdoły itp</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

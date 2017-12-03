@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="table-responsive">
+    <table class="table table-stripped">
+        <h1 align="center">Kolejki: </h1>
+        <tr>
+            @for (int i = 1; i <= 19; i++)
+            {
+                string textColor = i <= @ViewBag.actualRound ? "text-warning" : "text-info";
+                <td class="column"><a href="">@Html.ActionLink(i.ToString(), "Schedule", new {selectedRound = i}, new {@class = @textColor + " htmlactionlink"})</a></td>
+            }
+        </tr>
+        <tr>
+            @for (int i = 20; i <= 38; i++)
+            {
+                string textColor = i <= @ViewBag.actualRound ? "text-warning" : "text-info";
+                <td class="column"><a href="">@Html.ActionLink(i.ToString(), "Schedule", new {selectedRound = i}, new {@class = @textColor + " htmlactionlink "})</a></td>
+            }
+        </tr>
+    </table>
+</div>
+
+<h2 style="text-align:center">Kolejka: @ViewBag.selectedRound  Skuteczność: @ViewBag.success % </h2>
+
+<main>
+   <div class="table-responsive">
+        <table class="table table-stripped">
+            <thead>
+            <tr>
+                <td>Data</td>
+                <td>Gospodarze</td>
+                <td>Goście</td>
+                <td>Wynik</td>
+                <td>Predykcja</td>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var row in Model)
+            {
+                string color;
+                string bold = null;
+                if (row.HomeScorePrediction == null || row.AwayScorePrediction == null ||
+                    row.AwayScore == null || row.HomeScore == null)
+                {
+                    bold = null;
+                }
+                else if (row.HomeScorePrediction.Equals(row.HomeScore) && row.AwayScorePrediction.Equals(row.AwayScore))
+                {
+                    bold = "font-bold";
+                }
+
+                if (row.HomeScorePrediction == null || row.AwayScorePrediction == null ||
+                    row.AwayScore == null || row.HomeScore == null)
+                {
+                    color = null;
+                }
+                else if (row.HomeScorePrediction > row.AwayScorePrediction
+                         && row.HomeScore > row.AwayScore)
+                {
+                    color = "success";
+                }
+                else if (row.HomeScorePrediction < row.AwayScorePrediction
+                         && row.HomeScore < row.AwayScore)
+                {
+                    color = "success";
+                }
+                else if (row.HomeScorePrediction == row.AwayScorePrediction
+                         && row.HomeScore == row.AwayScore)
+                {
+                    color = "success";
+                }
+                else
+                {
+                    color = null;
+                }
+
+                <tr class="@color @bold"><td>@row.Date.ToString("dd.MM.yyy")</td><td>@row.HomeTeam</td><td>@row.AwayTeam</td><td>@row.HomeScore : @row.AwayScore</td><td>@row.HomeScorePrediction : @row.AwayScorePrediction</td></tr>
+            }
+            </tbody>
+        </table>
+   </div>
+</main>
+
+

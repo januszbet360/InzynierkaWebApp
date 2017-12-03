@@ -1,0 +1,35 @@
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\obj\Debug\DataDownloader.csprojResolveAssemblyReference.cache
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\DataDownloader.dll.config
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\DataDownloader.dll
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\DataDownloader.pdb
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\DataModel.dll
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\EntityFramework.dll
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\Newtonsoft.Json.dll
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\DataModel.pdb
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\EntityFramework.xml
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\Newtonsoft.Json.xml
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\obj\Debug\DataDownloader.dll
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\obj\Debug\DataDownloader.pdb
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\CsvHelper.dll
+E:\Projekty Visual Studio\FootballPredictor\DataDownloader\bin\Debug\CsvHelper.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\DataDownloader.dll.config
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\DataDownloader.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\DataDownloader.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\CsvHelper.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\DataModel.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\EntityFramework.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\DataModel.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\CsvHelper.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\EntityFramework.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\obj\Debug\DataDownloader.csprojResolveAssemblyReference.cache
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\obj\Debug\DataDownloader.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\DataDownloader\obj\Debug\DataDownloader.pdb

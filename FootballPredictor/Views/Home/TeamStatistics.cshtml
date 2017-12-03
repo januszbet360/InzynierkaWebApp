@@ -1,0 +1,159 @@
+﻿   @using System.Text  
+ @model FootballPredictor.Models.TeamsInfoModel
+
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2 align="center">Statystyki zespołowe</h2>
+@{
+    var teamsList = new List<SelectListItem>();
+    foreach (var x in @ViewBag.teams)
+    {
+        teamsList.Add(new SelectListItem() { Text = x.ToString(), Value = x.ToString() });
+    }
+
+    var availableSeasons = new List<SelectListItem>();
+    foreach (var x in @ViewBag.allSeasons)
+    {
+        availableSeasons.Add(new SelectListItem() { Text = x.ToString(), Value = x.ToString() });
+    }
+
+    using (@Html.BeginForm("TeamStatistics", "Home", FormMethod.Post))
+    {
+        <div align="center">
+            @Html.DropDownListFor(m => m.Team1, teamsList, "Wybierz zespół  ", new { @class = "selectpicker" })
+            @Html.DropDownListFor(m => m.SeasonSince, availableSeasons, "Wybierz sezon początkowy", new { @class = "selectpicker" })
+            @Html.DropDownListFor(m => m.SeasonTo, availableSeasons, "Wybierz sezon końcowy", new { @class = "selectpicker" })
+
+            <input type="submit" value="Pokaż">
+        </div>
+    }
+
+    <br/><br/>
+
+    if (@ViewBag.url != null)
+    {
+        <div align="center" > <img src="@ViewBag.url" alt="" style="width: 20%;height: 20%"></div>
+    }
+
+    <br/>
+
+    if (@ViewBag.matchesPredicted  != null && @ViewBag.rightResultPrediction != null && @ViewBag.rightScoresPrediction != null)
+    {
+        var successResult = (float)@ViewBag.rightResultPrediction / (float)@ViewBag.matchesPredicted *100;
+        var successScore = (float)@ViewBag.rightScoresPrediction / (float)@ViewBag.matchesPredicted *100;
+
+         <p align="center">Ilość meczów z predykcją dla wybranej drużyny w wybranym okresie: @ViewBag.matchesPredicted</p>
+        <p align="center">Ilość meczów z poprawnym wskazaniem rozstrzygnięcia: @ViewBag.rightResultPrediction (@successResult %)</p>
+        <p align="center">Ilość meczów z poprawnym wynikiem: @ViewBag.rightScoresPrediction (@successScore %)</p>
+
+
+    }
+
+    <br />
+
+    if (@ViewBag.SeasonStats != null)
+    {
+        <table class="table table-stripped table-bordered" style="text-align: center">
+            <thead>
+                <tr class="info">
+                    <th>Sezon</th>
+                    <th>Nazwa</th>
+                    <th>Mecze</th>
+                    <th>Punkty</th>
+                    <th>Wygranych</th>
+                    <th>Remisów</th>
+                    <th>Porażek</th>
+                    <th>Strzelonych</th>
+                    <th>Straconych</th>
+                    <th>Bilans</th>
+                </tr>
+            </thead>    
+            <tbody>
+                @foreach (var row in ViewBag.SeasonStats)
+                {
+                    int difference = @row.GoalsShotted - @row.GoalsLost;
+                    <tr ><td>@row.Season</td><td>@row.Name</td><td>@row.PlayedMatches</td><td>@row.Points</td><td>@row.Won</td><td>@row.Drawn</td><td>@row.Lost</td><td>@row.GoalsShotted</td><td>@row.GoalsLost</td><td>@difference</td></tr>
+                }
+            </tbody>
+        </table>
+     }
+
+    if (ViewBag.Matches != null)
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="table  table-responsive table-hover">
+                        <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Sezon</th>
+                            <th>Gospodarz</th>
+                            <th>Gość</th>
+                            <th>Wynik</th>
+                        </tr>
+                        </thead>
+                        
+                        @{
+                            int counter = 0;
+                            foreach (var row in ViewBag.Matches)
+                            {
+                                counter++;
+                                StringBuilder rowNumber = new StringBuilder();
+                                rowNumber.Append("row");
+                                rowNumber.Append(counter.ToString());
+
+
+
+                                <tbody>
+                                <tr class="clickable bg-info" data-toggle="collapse" id="@rowNumber.ToString()" data-target=".@rowNumber.ToString()">
+                                    <td>@row.Date.ToString("dd.MM.yyy")</td>
+                                    <td>@row.Season</td>
+                                    <td>@row.HomeTeam</td>
+                                    <td>@row.AwayTeam</td>
+                                    <td>@row.HomeGoals : @row.AwayGoals</td>
+                                </tr>
+                                <tr class="collapsedRow collapse @rowNumber.ToString()">
+                                   
+                                    <td colspan="5">
+                                        <table class="table  table-responsive table-hover matches">
+                                            <tr class="active">
+                                                <td>#</td>
+                                                <td>@row.HomeTeam</td>
+                                                <td>@row.AwayTeam</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Strzały</td>
+                                                <td>@row.HomeShots</td>
+                                                <td>@row.AwayShots</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Strzały celne</td>
+                                                <td>@row.HomeShotsOnTarget</td>
+                                                <td>@row.AwayShotsOnTarget</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Żółte kartki</td>
+                                                <td>@row.HomeYellowCards</td>
+                                                <td>@row.AwayYellowCards</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Żółte kartki</td>
+                                                <td>@row.HomeRedCards</td>
+                                                <td>@row.AwayRedCards</td>
+                                            </tr>
+                                        </table>
+                                    </td>                
+                                </tr>
+                                </tbody>
+                            }
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+      
+    }
+}

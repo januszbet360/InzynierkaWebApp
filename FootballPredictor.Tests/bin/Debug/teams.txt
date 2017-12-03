@@ -1,0 +1,92 @@
+Arsenal,Arsenal FC,http://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg
+Leicester,Leicester City FC,http://upload.wikimedia.org/wikipedia/en/6/63/Leicester02.png
+Watford,Watford FC,https://upload.wikimedia.org/wikipedia/en/e/e2/Watford.svg
+Liverpool,Liverpool FC,http://upload.wikimedia.org/wikipedia/de/0/0a/FC_Liverpool.svg
+Southampton,Southampton FC,http://upload.wikimedia.org/wikipedia/de/c/c9/FC_Southampton.svg
+Swansea,Swansea City FC,http://upload.wikimedia.org/wikipedia/de/a/ab/Swansea_City_Logo.svg
+West Brom,West Bromwich Albion FC,http://upload.wikimedia.org/wikipedia/de/8/8b/West_Bromwich_Albion.svg
+Bournemouth,AFC Bournemouth,https://upload.wikimedia.org/wikipedia/de/4/41/Afc_bournemouth.svg
+Everton,Everton FC,http://upload.wikimedia.org/wikipedia/de/f/f9/Everton_FC.svg
+Stoke,Stoke City FC,http://upload.wikimedia.org/wikipedia/de/a/a3/Stoke_City.svg
+Crystal Palace,Crystal Palace FC,http://upload.wikimedia.org/wikipedia/de/b/bf/Crystal_Palace_F.C._logo_(2013).png
+Huddersfield,Huddersfield Town,https://upload.wikimedia.org/wikipedia/en/5/5a/Huddersfield_Town_A.F.C._logo.svg
+Chelsea,Chelsea FC,http://upload.wikimedia.org/wikipedia/de/5/5c/Chelsea_crest.svg
+Burnley,Burnley FC,https://upload.wikimedia.org/wikipedia/en/0/02/Burnley_FC_badge.png
+Brighton,Brighton & Hove Albion,https://upload.wikimedia.org/wikipedia/en/f/fd/Brighton_&_Hove_Albion_logo.svg
+Man City,Manchester City FC,https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg
+Newcastle,Newcastle United FC,http://upload.wikimedia.org/wikipedia/de/5/56/Newcastle_United_Logo.svg
+Tottenham,Tottenham Hotspur FC,http://upload.wikimedia.org/wikipedia/de/b/b4/Tottenham_Hotspur.svg
+Man United,Manchester United FC,http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg
+West Ham,West Ham United FC,http://upload.wikimedia.org/wikipedia/de/e/e0/West_Ham_United_FC.svg
+Sunderland,Sunderland AFC,http://upload.wikimedia.org/wikipedia/de/6/60/AFC_Sunderland.svg
+Derby,Derby County,https://upload.wikimedia.org/wikipedia/en/4/4a/Derby_County_crest.svg
+Nott'm Forest,Nottingham Forest,https://upload.wikimedia.org/wikipedia/en/d/d2/Nottingham_Forest_logo.svg
+Millwall,Millwall FC,https://upload.wikimedia.org/wikipedia/en/7/71/Millwall_FC_logo.png
+Bristol City,Bristol City,https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Bristol_City_FC.svg/810px-Bristol_City_FC.svg.png
+Barnsley,Barnsley FC,https://upload.wikimedia.org/wikipedia/en/c/c9/Barnsley_FC.svg
+Wolves,Wolverhampton Wanderers FC,https://upload.wikimedia.org/wikipedia/en/f/fc/Wolverhampton_Wanderers.svg
+Middlesbrough,Middlesbrough FC,https://upload.wikimedia.org/wikipedia/en/2/2c/Middlesbrough_FC_crest.svg
+Sheffield United,Sheffield United FC,https://upload.wikimedia.org/wikipedia/en/9/9c/Sheffield_United_FC_logo.svg
+Brentford,Brentford FC,https://upload.wikimedia.org/wikipedia/en/c/c8/Brentford_F.C..png
+QPR,Queens Park Rangers,http://upload.wikimedia.org/wikipedia/de/d/d4/Queens_Park_Rangers.svg
+Reading,Reading,https://upload.wikimedia.org/wikipedia/en/thumb/1/11/Reading_FC.svg/300px-Reading_FC.svg.png
+Preston,Preston North End,https://upload.wikimedia.org/wikipedia/en/2/21/PNE_FC.png
+Sheffield Weds,Sheffield Wednesday,https://upload.wikimedia.org/wikipedia/en/8/86/Sheffield_Wednesday_crest_from_2016.jpg
+Ipswich,Ipswich Town,https://upload.wikimedia.org/wikipedia/en/4/43/Ipswich_Town.svg
+Birmingham,Birmingham City,https://upload.wikimedia.org/wikipedia/en/6/68/Birmingham_City_FC_logo.svg
+Fulham,Fulham FC,http://upload.wikimedia.org/wikipedia/de/a/a8/Fulham_fc.svg
+Norwich,Norwich City FC,http://upload.wikimedia.org/wikipedia/de/8/8c/Norwich_City.svg
+Burton,Burton Albion FC,https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Burton_Albion_FC_logo.svg/847px-Burton_Albion_FC_logo.svg.png
+Cardiff,Cardiff City FC,http://upload.wikimedia.org/wikipedia/de/c/c6/Cardiff_City_Logo.png
+Aston Villa,Aston Villa FC,http://upload.wikimedia.org/wikipedia/de/9/9f/Aston_Villa_logo.svg
+Hull,Hull City FC,https://upload.wikimedia.org/wikipedia/en/thumb/2/20/Hull_City_Crest_2014.svg/195px-Hull_City_Crest_2014.svg.png
+Bolton,Bolton Wanderers FC,https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Bolton_Wanderers_FC_logo.svg/278px-Bolton_Wanderers_FC_logo.svg.png
+Leeds,Leeds United,https://upload.wikimedia.org/wikipedia/en/0/05/Leeds_United_Logo.png
+Bradford,Bradford City AFC,https://upload.wikimedia.org/wikipedia/en/3/32/Bradford_City_AFC.png
+Blackpool,Blackpool FC,https://upload.wikimedia.org/wikipedia/en/d/df/Blackpool_FC_logo.svg
+Shrewsbury,Shrewsbury Town FC,https://upload.wikimedia.org/wikipedia/en/1/1b/Shrewsbury_Town_Badge_2015-.jpg
+Northampton,Northampton Town,https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Northampton_Town_FC_logo.png/225px-Northampton_Town_FC_logo.png
+Scunthorpe,Scunthorpe United FC,https://upload.wikimedia.org/wikipedia/en/9/95/Scunthorpe_United_FC_logo.svg
+AFC Wimbledon,AFC Wimbledon,https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/AFC_Wimbledon.svg/180px-AFC_Wimbledon.svg.png
+Portsmouth,Portsmouth,https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Portsmouth_FC_crest.svg/330px-Portsmouth_FC_crest.svg.png
+Rochdale,Rochdale AFC,https://upload.wikimedia.org/wikipedia/en/d/d5/Rochdale_badge.png
+Peterboro,Peterborough United FC,https://upload.wikimedia.org/wikipedia/en/d/d4/Peterborough_United.svg
+Plymouth,Plymouth Argyle,https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Plymouth_Argyle_F.C._logo.svg/300px-Plymouth_Argyle_F.C._logo.svg.png
+Oldham,Oldham Athletic AFC,https://upload.wikimedia.org/wikipedia/en/2/21/Oldham_Athletic_new_badge.png
+Oxford,Oxford United,https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Oxford_United_FC_logo.svg/225px-Oxford_United_FC_logo.svg.png
+Milton Keynes Dons,Milton Keynes Dons,https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/MK_Dons.png/225px-MK_Dons.png
+Wigan,Wigan Athletic FC,https://upload.wikimedia.org/wikipedia/en/4/43/Wigan_Athletic.svg
+Fleetwood Town,Fleetwood Town FC,https://upload.wikimedia.org/wikipedia/en/6/64/Fleetwood_Town_FC.png
+Rotherham,Rotherham United,https://upload.wikimedia.org/wikipedia/en/c/c0/Rotherham_United_FC.svg
+Doncaster,Doncaster Rovers FC,https://upload.wikimedia.org/wikipedia/en/4/46/Doncaster_Rovers_FC.png
+Gillingham,Gillingham FC,https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/FC_Gillingham_Logo.svg/788px-FC_Gillingham_Logo.svg.png
+Charlton,Charlton Athletic,https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Charlton_Athletic.svg/240px-Charlton_Athletic.svg.png
+Briston Rvs,Bristol Rovers,https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Bristol_Rovers_F.C._logo.svg/225px-Bristol_Rovers_F.C._logo.svg.png
+Bury,Bury FC,https://upload.wikimedia.org/wikipedia/en/b/b7/Bury_FC.svg
+Walsall,Walsall FC,https://upload.wikimedia.org/wikipedia/en/e/ef/Walsall_FC.svg
+Southend,Southend United FC,https://upload.wikimedia.org/wikipedia/en/7/79/Southend_United.svg
+Blackburn,Blackburn Rovers FC,https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Blackburn_Rovers.svg/270px-Blackburn_Rovers.svg.png
+Accrington,Accrington Stanley,https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Accstanley.png/330px-Accstanley.png
+Colchester,Colchester United FC,https://upload.wikimedia.org/wikipedia/en/4/48/Colchester_United_FC_logo.svg
+Stevenage,Stevenage FC,https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Stevenage_Football_Club.png/225px-Stevenage_Football_Club.png
+Newport County,Newport County,https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Newport_County_crest.png/300px-Newport_County_crest.png
+Morecambe,Morecambe FC,https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Morecambe_FC_Badge.png/263px-Morecambe_FC_Badge.png
+Cheltenham,Cheltenham Town,https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Cheltenham_Town_F.C._logo.svg/240px-Cheltenham_Town_F.C._logo.svg.png
+Luton,Luton Town,https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/LutonTownFC2009.png/225px-LutonTownFC2009.png
+Yeovil,Yeovil Town,https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Yeovil_Town_FC_logo.svg/263px-Yeovil_Town_FC_logo.svg.png
+Forest Green,Forest Green Rovers,https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Forest_Green_Rovers_crest.svg/300px-Forest_Green_Rovers_crest.svg.png
+Barnet,Barnet FC,https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Barnet_FC.svg/225px-Barnet_FC.svg.png
+Exter,Exeter City,https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Exeter_City_FC.svg/300px-Exeter_City_FC.svg.png
+Cambridge,Cambridge United,https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Cambridge_United_FC.svg/240px-Cambridge_United_FC.svg.png
+Crewe,Crewe Alexandra FC,https://upload.wikimedia.org/wikipedia/en/9/9d/Crewe_Alexandra.svg
+Mansfield,Mansfield Town,https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/Mansfield_Town_FC.svg/330px-Mansfield_Town_FC.svg.png
+Crawley Town,Crawley Town,https://upload.wikimedia.org/wikipedia/en/8/8b/Crawley_Town_FC_logo.png
+Port Vale,Port Vale FC,https://upload.wikimedia.org/wikipedia/en/5/5f/Port_Vale_logo.svg
+Coventry,Coventry City FC,https://upload.wikimedia.org/wikipedia/en/9/94/Coventry_City_FC_logo.svg
+Notts County,Notts County,https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Notts_County_Logo.png/225px-Notts_County_Logo.png
+Chesterfield,Chesterfield FC,https://upload.wikimedia.org/wikipedia/en/9/94/Chesterfield_FC_crest.svg
+Grimsby,Grimsby Town,https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Grimb_Badge.png/225px-Grimb_Badge.png
+Carlisle,Carlisle United,https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Carl_Badge.png/240px-Carl_Badge.png
+Swindon,Swindon Town FC,https://upload.wikimedia.org/wikipedia/en/a/a3/Swindon_Town_FC.svg
+Wycombe,Wycombe Wanderers,https://upload.wikimedia.org/wikipedia/en/f/fb/Wycombe_Wanderers_FC_logo.svg
+Lincoln,Lincoln City,https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Lincoln_city_%282014%29.png/195px-Lincoln_city_%282014%29.png

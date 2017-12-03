@@ -1,0 +1,36 @@
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\obj\Debug\FootballPredictor.Tests.csprojResolveAssemblyReference.cache
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\FootballPredictor.Tests.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\FootballPredictor.Tests.pdb
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\DataDownloader.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\DataModel.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\Newtonsoft.Json.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\EntityFramework.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\DataDownloader.pdb
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\DataModel.pdb
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\Newtonsoft.Json.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\EntityFramework.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\obj\Debug\FootballPredictor.Tests.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\obj\Debug\FootballPredictor.Tests.pdb
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\CsvHelper.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\CsvHelper.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\FootballPredictor.Tests.dll.config
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\FootballPredictor.Tests.dll.config
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\FootballPredictor.Tests.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\FootballPredictor.Tests.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\DataDownloader.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\DataModel.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\CsvHelper.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\DataDownloader.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\DataModel.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\bin\Debug\CsvHelper.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\obj\Debug\FootballPredictor.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\obj\Debug\FootballPredictor.Tests.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor.Tests\obj\Debug\FootballPredictor.Tests.pdb

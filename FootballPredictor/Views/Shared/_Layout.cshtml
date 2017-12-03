@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>System predykcji wyników meczów piłkarskich</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+    <!--przeniesc do osobnego pliku css-->
+    <style>
+       
+
+        .htmlactionlink{
+            font-size: 25px;
+        }
+
+        .column {
+            background-color: #1C2331;
+            border: 1px solid white;
+
+        }
+        a:hover {
+            text-decoration: none;
+            color: blue;
+        }
+
+
+        .matches {
+            background-color: darkcyan;
+        }
+        .matches tr {
+            font-weight:bold; 
+        }
+        .matches td {
+            font-weight: initial;
+            background-color:lightgrey;
+        }
+      
+
+        .logo {
+            width: 50%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .leagueInfo {
+            font-size: 17px;
+        }
+
+        .headimage {
+            max-width: 100%;
+            height:100%;
+            padding: 0em;
+        }
+
+        .mainLogo {
+            width: 100%;
+            height: 100%; 
+        }
+        .headPanel{
+            padding:0px;          
+            height: 100%; 
+        }
+        .navbar-nav {
+            width:100%;
+            float:none;
+            margin:0 auto;
+            display: block;
+            text-align: center;
+        }
+
+        th{
+            text-align:center;
+        }
+
+        td{
+            text-align:center;
+        }
+
+        .navbar-nav > li {
+            display: inline-block;
+            float:none;
+            padding-left:20px;
+            padding-right:20px;
+        }
+
+
+        .font-bold {
+            font-weight: bold;}
+
+    </style>
+    
+   
+   
+</head>
+<body>
+    <div class="headPanel">
+        <a class="headimage" href="@Url.Action("Index")">
+            <img src="~/Images/Logo.jpg" class="img-responsive mainLogo" />
+        </a>
+    </div>
+
+
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse" >
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a  href="@Url.Action("Index")" data-toggle="tooltip" data-placement="top" 
+                       title="Informacje o rozgrywkach ligowych">Strona główna</a></li>
+                <li><a href="@Url.Action("Schedule")" data-toggle="tooltip" data-placement="top" 
+                       title="Terminarz z podziałem na kolejki">Terminarz</a></li>
+                <li><a href="@Url.Action("Table")" data-toggle="tooltip" data-placement="top" 
+                       title="Aktualna tabela rozgrywek">Tabela</a></li>
+                <li><a href="@Url.Action("NextRound")" data-toggle="tooltip" data-placement="top"
+                       title="Predykcja następnej kolejki rozgrywek">Predykcja</a></li>
+                <li><a href="@Url.Action("H2H")" data-toggle="tooltip" data-placement="top" 
+                       title="Porównanie bezpośrednie meczów miedzy dwoma drużynami">Porównaj kluby</a></li>
+                <li><a href="@Url.Action("TeamStatistics")" data-toggle="tooltip" data-placement="top" 
+                       title="Informacje o konkretnej drużynie">Statystyki zespołu</a></li>
+                <!-- <li><a href="Url.Action("About")">O autorach</a></li>-->
+
+            </ul>
+           
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>System predykcji - wersja beta. Autorzy systemu predykcji: Asztemborski.D, Dąbrowski.J, Szotowicz.M</p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+    
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+</body>
+</html>

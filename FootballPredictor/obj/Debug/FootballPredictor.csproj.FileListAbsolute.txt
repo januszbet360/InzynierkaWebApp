@@ -1,0 +1,114 @@
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\obj\Debug\FootballPredictor.csprojResolveAssemblyReference.cache
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\ApplicationInsights.config
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\csc.exe
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\System.Collections.Immutable.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\vbc.exe
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\VBCSCompiler.exe
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\roslyn\VBCSCompiler.exe.config
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\FootballPredictor.dll.config
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\FootballPredictor.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\FootballPredictor.pdb
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\DataDownloader.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\DataModel.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\EntityFramework.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\EntityFramework.SqlServer.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.DependencyCollector.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.Web.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.WindowsServer.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.ApplicationInsights.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.Web.Infrastructure.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Helpers.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Mvc.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Razor.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Webpages.Deployment.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Webpages.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Webpages.Razor.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Newtonsoft.Json.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\DataDownloader.pdb
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\DataModel.pdb
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\EntityFramework.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\EntityFramework.SqlServer.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.DependencyCollector.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.Web.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.AI.WindowsServer.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.ApplicationInsights.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Razor.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Webpages.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Webpages.Deployment.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Webpages.Razor.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Helpers.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\System.Web.Mvc.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\bin\Newtonsoft.Json.xml
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\obj\Debug\FootballPredictor.dll
+E:\Projekty Visual Studio\FootballPredictor\FootballPredictor\obj\Debug\FootballPredictor.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\ApplicationInsights.config
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\csc.exe
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\vbc.exe
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\VBCSCompiler.exe
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\FootballPredictor.dll.config
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\FootballPredictor.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\FootballPredictor.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\DataDownloader.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\DataModel.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\EntityFramework.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\EntityFramework.SqlServer.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.Web.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Helpers.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Mvc.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Razor.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Webpages.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Webpages.Razor.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Newtonsoft.Json.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\DataDownloader.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\DataModel.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\EntityFramework.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\EntityFramework.SqlServer.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.Web.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Razor.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Webpages.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Webpages.Razor.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Helpers.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\System.Web.Mvc.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\Newtonsoft.Json.xml
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\obj\Debug\FootballPredictor.csprojResolveAssemblyReference.cache
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\obj\Debug\FootballPredictor.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\obj\Debug\FootballPredictor.pdb
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\CsvHelper.dll
+C:\Users\Darek\Desktop\inzynierka-master\inzynierka-master\FootballPredictor\bin\CsvHelper.xml

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FootballDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FullStatistics">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeamId" Type="int" Nullable="false" />
+    <Property Name="Season" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MatchesPlayed" Type="int" Nullable="false" />
+    <Property Name="Points" Type="int" Nullable="false" />
+    <Property Name="MatchesWon" Type="int" Nullable="false" />
+    <Property Name="MatchesDrawn" Type="int" Nullable="false" />
+    <Property Name="MatchesLost" Type="int" Nullable="false" />
+    <Property Name="GoalsScored" Type="int" Nullable="false" />
+    <Property Name="GoalsLost" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Matches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HomeId" Type="int" Nullable="false" />
+    <Property Name="AwayId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="HomeGoalsPredicted" Type="int" />
+    <Property Name="AwayGoalsPredicted" Type="int" />
+    <Property Name="Season" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Matchweek" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Scores">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HomeGoals" Type="int" Nullable="false" />
+    <Property Name="AwayGoals" Type="int" Nullable="false" />
+    <Property Name="HomeShots" Type="int" Nullable="false" />
+    <Property Name="AwayShots" Type="int" Nullable="false" />
+    <Property Name="HomeShotsOnTarget" Type="int" Nullable="false" />
+    <Property Name="AwayShotsOnTarget" Type="int" Nullable="false" />
+    <Property Name="HomeCorners" Type="int" Nullable="false" />
+    <Property Name="AwayCorners" Type="int" Nullable="false" />
+    <Property Name="HomeFouls" Type="int" Nullable="false" />
+    <Property Name="AwayFouls" Type="int" Nullable="false" />
+    <Property Name="HomeYellowCards" Type="int" Nullable="false" />
+    <Property Name="AwayYellowCards" Type="int" Nullable="false" />
+    <Property Name="HomeRedCards" Type="int" Nullable="false" />
+    <Property Name="AwayRedCards" Type="int" Nullable="false" />
+    <Property Name="HalfTimeHomeGoals" Type="int" Nullable="false" />
+    <Property Name="HalfTimeAwayGoals" Type="int" Nullable="false" />
+    <Property Name="Referee" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="MatchId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Teams">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ImageURL" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <Association Name="FK__FullStati__TeamI__46E78A0C">
+    <End Role="Teams" Type="Self.Teams" Multiplicity="1" />
+    <End Role="FullStatistics" Type="Self.FullStatistics" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FullStatistics">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matches__AwayId__412EB0B6">
+    <End Role="Teams" Type="Self.Teams" Multiplicity="1" />
+    <End Role="Matches" Type="Self.Matches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Matches">
+        <PropertyRef Name="AwayId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matches__HomeId__403A8C7D">
+    <End Role="Teams" Type="Self.Teams" Multiplicity="1" />
+    <End Role="Matches" Type="Self.Matches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Matches">
+        <PropertyRef Name="HomeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Scores__MatchId__440B1D61">
+    <End Role="Matches" Type="Self.Matches" Multiplicity="1" />
+    <End Role="Scores" Type="Self.Scores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Scores">
+        <PropertyRef Name="MatchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FootballDbModelStoreContainer">
+    <EntitySet Name="FullStatistics" EntityType="Self.FullStatistics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Matches" EntityType="Self.Matches" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Scores" EntityType="Self.Scores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teams" EntityType="Self.Teams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__FullStati__TeamI__46E78A0C" Association="Self.FK__FullStati__TeamI__46E78A0C">
+      <End Role="Teams" EntitySet="Teams" />
+      <End Role="FullStatistics" EntitySet="FullStatistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matches__AwayId__412EB0B6" Association="Self.FK__Matches__AwayId__412EB0B6">
+      <End Role="Teams" EntitySet="Teams" />
+      <End Role="Matches" EntitySet="Matches" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matches__HomeId__403A8C7D" Association="Self.FK__Matches__HomeId__403A8C7D">
+      <End Role="Teams" EntitySet="Teams" />
+      <End Role="Matches" EntitySet="Matches" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Scores__MatchId__440B1D61" Association="Self.FK__Scores__MatchId__440B1D61">
+      <End Role="Matches" EntitySet="Matches" />
+      <End Role="Scores" EntitySet="Scores" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

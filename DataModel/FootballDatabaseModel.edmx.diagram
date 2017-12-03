@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e974e8f82ec9493e862361d1dcc7b49d" Name="Diagram1">
+        <EntityTypeShape EntityType="FootballScoresDBModel.FullStatistic" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FootballScoresDBModel.Match" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FootballScoresDBModel.Score" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FootballScoresDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FootballScoresDBModel.Team" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="FootballScoresDBModel.FK__FullStati__TeamI__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="FootballScoresDBModel.FK__Matches__AwayId__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="FootballScoresDBModel.FK__Matches__HomeId__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="FootballScoresDBModel.FK__Scores__MatchId__440B1D61" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

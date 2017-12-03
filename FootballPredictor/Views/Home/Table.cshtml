@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FootballPredictor.Models.TeamModel>
+@{
+    ViewBag.Title = "Tabela";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <div class="table-responsive">
+        <table class="table table-stripped table-bordered" style="text-align: center"> 
+            <thead>
+            <tr class="info" >
+                <th>#</th><th>Nazwa</th><th>Mecze</th><th>Punkty</th><th>Wygranych</th><th>Remisów</th><th>Porażek</th><th>Strzelonych</th><th>Straconych</th><th>Bilans</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var row in Model)
+            {
+                int difference = @row.GoalsShotted - @row.GoalsLost;
+                string color = null;
+                if (5 > row.Position) color = "success";
+                else if (5 == row.Position) color = "warning";
+                else if (row.Position > 17) color = "danger";
+                else color = "active";
+
+                <tr class="@color" ><td>@row.Position</td><td>@row.Name</td><td>@row.PlayedMatches</td><td>@row.Points</td><td>@row.Won</td><td>@row.Drawn</td><td>@row.Lost</td><td>@row.GoalsShotted</td><td>@row.GoalsLost</td><td>@difference</td></tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <div>
+        Oznaczenie:
+        <span style="padding-left:20px"><span class="bg-success" style="font-size: 30px; color:#d9dac2"> Liga mistrzów </span></span>
+        <span style="padding-left:20px"><span class="bg-warning text-warning" style="font-size: 30px; color: #e4e2d4"> Liga europejska </span></span>
+        <span style="padding-left:20px"><span class="bg-danger text-danger" style="font-size: 30px; color: #c1c8c3"> Strefa spadkowa </span></span>
+    </div>
+</main>

@@ -1,0 +1,113 @@
+﻿@using System.Text
+@model FootballPredictor.Models.TeamsInfoModel
+    @{
+    ViewBag.Title = "H2H";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 align="center">Porównanie zespołów</h2>
+
+<div align="center">
+@{
+    var teamsList = new List<SelectListItem>();
+    foreach (var x in @ViewBag.Teams)
+    {
+        teamsList.Add(new SelectListItem() {Text = x.ToString(), Value = x.ToString()});
+    }
+
+    var availableSeasons = new List<SelectListItem>();
+    foreach (var x in @ViewBag.allSeasons)
+    {
+        availableSeasons.Add(new SelectListItem() { Text = x.ToString(), Value = x.ToString() });
+    }
+
+
+    using (@Html.BeginForm("H2H", "Home", FormMethod.Post))
+    {
+
+        @Html.DropDownListFor(m => m.Team1, teamsList, "Wybierz pierwszy zespół  ", new { @class = "selectpicker" })
+        @: vs
+        @Html.DropDownListFor(m => m.Team2, teamsList, "Wybierz drugi zespół", new { @class = "selectpicker" })
+        @:    
+        @Html.DropDownListFor(m => m.SeasonSince, availableSeasons, "Wybierz sezon początkowy", new { @class = "selectpicker" })
+        @Html.DropDownListFor(m => m.SeasonTo, availableSeasons, "Wybierz sezon końcowy", new { @class = "selectpicker" })
+
+        <input type="submit" value="Porównaj">
+     }
+
+
+
+    if (ViewBag.Matches != null)
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="table  table-responsive table-hover">
+                        <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Sezon</th>
+                            <th>Gospodarz</th>
+                            <th>Gość</th>
+                            <th>Wynik</th>
+                        </tr>
+                        </thead>                  
+                        @{
+                            int counter = 0;
+                            foreach (var row in ViewBag.Matches)
+                            {
+                                counter++;
+                                StringBuilder rowNumber = new StringBuilder();
+                                rowNumber.Append("row");
+                                rowNumber.Append(counter.ToString());
+
+                                <tbody>
+                                <tr class="clickable bg-info" data-toggle="collapse" id="@rowNumber.ToString()" data-target=".@rowNumber.ToString()">
+                                    <td>@row.Date.ToString("dd.MM.yyy")</td>
+                                    <td>@row.Season</td>
+                                    <td>@row.HomeTeam</td>
+                                    <td>@row.AwayTeam</td>
+                                    <td>@row.HomeGoals : @row.AwayGoals</td>
+                                </tr>
+                                <tr class="collapsedRow collapse @rowNumber.ToString()">
+                                   
+                                    <td colspan="5">
+                                        <table class="table  table-responsive table-hover matches">
+                                            <tr class="active">
+                                                <td>#</td>
+                                                <td>@row.HomeTeam</td>
+                                                <td>@row.AwayTeam</td>
+                                            </tr>
+                                            <tr >
+                                                <td>Strzały</td>
+                                                <td>@row.HomeShots</td>
+                                                <td>@row.AwayShots</td>
+                                            </tr>
+                                            <tr >
+                                                <td>Strzały celne</td>
+                                                <td>@row.HomeShotsOnTarget</td>
+                                                <td>@row.AwayShotsOnTarget</td>
+                                            </tr>
+
+                                        </table>
+                                    </td>                
+                                </tr>
+                                </tbody>
+                            }
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+      
+    }
+
+ }
+
+
+
+</div>
+
+<script>
+    $('.selectpicker').selectpicker();
+ </script>
