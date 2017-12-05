@@ -17,12 +17,13 @@
             {
                 int difference = @row.GoalsShotted - @row.GoalsLost;
                 string color = null;
-                if (5 > row.Position) color = "success";
+                if (4 > row.Position) color = "toThirdPlaces";
+                else if (row.Position == 4) color = "fourthPlace";
                 else if (5 == row.Position) color = "warning";
                 else if (row.Position > 17) color = "danger";
                 else color = "active";
 
-                <tr class="@color" ><td>@row.Position</td><td>@row.Name</td><td>@row.PlayedMatches</td><td>@row.Points</td><td>@row.Won</td><td>@row.Drawn</td><td>@row.Lost</td><td>@row.GoalsShotted</td><td>@row.GoalsLost</td><td>@difference</td></tr>
+                <tr class="@color " ><td>@row.Position</td><td>@row.Name</td><td>@row.PlayedMatches</td><td>@row.Points</td><td>@row.Won</td><td>@row.Drawn</td><td>@row.Lost</td><td>@row.GoalsShotted</td><td>@row.GoalsLost</td><td>@difference</td></tr>
             }
             </tbody>
         </table>
@@ -30,9 +31,9 @@
     
     
     <div>
-        Oznaczenie:
-        <span style="padding-left:20px"><span class="bg-success" style="font-size: 30px; color:#d9dac2"> Liga mistrzów </span></span>
-        <span style="padding-left:20px"><span class="bg-warning text-warning" style="font-size: 30px; color: #e4e2d4"> Liga europejska </span></span>
-        <span style="padding-left:20px"><span class="bg-danger text-danger" style="font-size: 30px; color: #c1c8c3"> Strefa spadkowa </span></span>
+        <b>Oznaczenie:</b>
+        <span style="padding-left:20px; padding-right: 20px"><span class="bg-success" style="font-size: 30px; color:#d9dac2">Liga Mistrzów</span></span>
+        <span style="padding-left:20px; padding-right: 20px"><span class="bg-warning" style="font-size: 30px; color: #e4e2d4">Liga Europejska</span></span>
+        <span style="padding-left: 20px; padding-right: 20px"><span class="bg-danger" style="font-size: 30px; color: #c1c8c3">Strefa spadkowa</span></span>
     </div>
 </main>

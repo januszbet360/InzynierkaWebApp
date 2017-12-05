@@ -17,6 +17,7 @@ namespace FootballPredictor.Controllers
         // GET: Home
         public ActionResult Index()
         {
+
             return View();
         }
 
@@ -91,20 +92,26 @@ namespace FootballPredictor.Controllers
 
                 foreach (var match in ctx.Matches.Where(e => ((e.HomeId == team1Id && e.AwayId == team2Id) ||
                                                               e.HomeId == team2Id && e.AwayId == team1Id)
-                                                             && DateTime.Compare(e.Date, today) < 0).OrderByDescending(d => d.Date))
+                                                             && DateTime.Compare(e.Date, today) < 0)
+                    .OrderByDescending(d => d.Date))
                 {
                     if (!SeasonsComapare(model.SeasonSince, model.SeasonTo, match.Season)) continue;
                     var homeTeam = ctx.Teams.First(q => q.Id == match.HomeId).FullName;
                     var awayTeam = ctx.Teams.First(q => q.Id == match.AwayId).FullName;
-                    var actualRound = ctx.Scores.Count(e => e.Date > new DateTime(2017, 06, 30)) / 10; //!!!!zmienic pozniej 
+                    var actualRound =
+                        ctx.Scores.Count(e => e.Date > new DateTime(2017, 06, 30)) / 10; //!!!!zmienic pozniej (z tego sezonu ilosc meczów z wynikiem / 10)
                     var stats = ctx.Scores.FirstOrDefault(q => q.MatchId == match.Id);
+                    if (stats == null) continue;
                     var season = GetCurrentSeason(match.Date);
                     singleMatchStats.Add(new MatchStatisticsModel(homeTeam, awayTeam, match.Date,
-                        match.HomeGoalsPredicted, match.AwayGoalsPredicted, match.Matchweek, stats.HomeGoals, stats.AwayGoals,
-                        stats.HomeShots, stats.AwayShots, stats.HomeShotsOnTarget, stats.AwayShotsOnTarget, stats.HomeCorners,
-                        stats.AwayCorners, stats.HomeFouls, stats.AwayFouls, stats.HomeYellowCards, stats.AwayYellowCards,
+                        match.HomeGoalsPredicted, match.AwayGoalsPredicted, match.Matchweek, stats.HomeGoals,
+                        stats.AwayGoals,
+                        stats.HomeShots, stats.AwayShots, stats.HomeShotsOnTarget, stats.AwayShotsOnTarget,
+                        stats.HomeCorners,
+                        stats.AwayCorners, stats.HomeFouls, stats.AwayFouls, stats.HomeYellowCards,
+                        stats.AwayYellowCards,
                         stats.HomeRedCards, stats.AwayRedCards, stats.HalfTimeHomeGoals, stats.HalfTimeAwayGoals,
-                        stats.Referee,season));
+                        stats.Referee, season));
                 }
 
                 ViewBag.Matches = singleMatchStats;
@@ -192,13 +199,13 @@ namespace FootballPredictor.Controllers
 
       
 
-        public ActionResult Schedule(int selectedRound = 1) {
+        public ActionResult Schedule(int selectedRound  = -1) {
             using (var ctx = new FootballEntities())
             {            
                 var actualSeason = GetCurrentSeason(DateTime.Today);
                 var actualRound = ctx.Scores.Count(e =>e.Match.Season.Equals(actualSeason))/10; //!!!!zmienic pozniej 
                 var data = new List<MainPageModel>();
-              
+                if (selectedRound == -1) selectedRound = actualRound;
                 int success = 0; // zmienic liczneie skutecznosci na jakis wzor
                  if (selectedRound <= actualRound)
                     foreach (var x in ctx.Matches.Where(d => (d.Matchweek == selectedRound) && d.Season.Equals(actualSeason)))
@@ -218,7 +225,7 @@ namespace FootballPredictor.Controllers
                 }
                 ViewBag.actualRound = actualRound;
                 ViewBag.selectedRound = selectedRound;
-                ViewBag.success = success;
+                if(selectedRound <= actualRound) ViewBag.success = success;
                 return View(data.Distinct());
             }
         }

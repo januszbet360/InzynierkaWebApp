@@ -75,7 +75,7 @@
             display: block;
             text-align: center;
         }
-
+        
         th{
             text-align:center;
         }
@@ -86,15 +86,42 @@
 
         .navbar-nav > li {
             display: inline-block;
-            float:none;
-            padding-left:20px;
-            padding-right:20px;
+            float:none;        
         }
 
-
         .font-bold {
-            font-weight: bold;}
+            font-weight: bold;
 
+        }
+
+        .nav > li > a {
+            padding-right: 30px;
+            padding-left: 30px;
+        } 
+        .table > th {
+            padding-right: 2px;
+            padding-left: 2px;
+        }
+      .headTable {
+          background-color: #e0e0e0  ;
+          font-size: 18px;
+      }
+
+      .icon {
+          font-size: 20px;
+          color: green;        
+      }
+
+      .predictionRow {
+          background-color: #F0FFF0;
+      }
+      .fourthPlace {
+          background-color: #94ff82;
+      }
+
+      .toThirdPlaces {
+          background-color: #69f252;
+      }
     </style>
     
    
@@ -108,32 +135,45 @@
     </div>
 
 
-    <nav class="navbar navbar-default navbar-static-top navbar-inverse" >
-        <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li><a  href="@Url.Action("Index")" data-toggle="tooltip" data-placement="top" 
-                       title="Informacje o rozgrywkach ligowych">Strona główna</a></li>
-                <li><a href="@Url.Action("Schedule")" data-toggle="tooltip" data-placement="top" 
-                       title="Terminarz z podziałem na kolejki">Terminarz</a></li>
-                <li><a href="@Url.Action("Table")" data-toggle="tooltip" data-placement="top" 
-                       title="Aktualna tabela rozgrywek">Tabela</a></li>
-                <li><a href="@Url.Action("NextRound")" data-toggle="tooltip" data-placement="top"
-                       title="Predykcja następnej kolejki rozgrywek">Predykcja</a></li>
-                <li><a href="@Url.Action("H2H")" data-toggle="tooltip" data-placement="top" 
-                       title="Porównanie bezpośrednie meczów miedzy dwoma drużynami">Porównaj kluby</a></li>
-                <li><a href="@Url.Action("TeamStatistics")" data-toggle="tooltip" data-placement="top" 
-                       title="Informacje o konkretnej drużynie">Statystyki zespołu</a></li>
-                <!-- <li><a href="Url.Action("About")">O autorach</a></li>-->
+        <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
 
-            </ul>
-           
-        </div>
-    </nav>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">
+                        <a href="@Url.Action("Index")" data-toggle="tooltip" data-placement="top"
+                                title="Informacje o rozgrywkach ligowych">Strona główna</a>
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Schedule" ? "active" : "")">
+                        <a href="@Url.Action("Schedule")" data-toggle="tooltip" data-placement="top"
+                                title="Terminarz z podziałem na kolejki">Terminarz</a>
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Table" ? "active" : "")">
+                        <a href="@Url.Action("Table")" data-toggle="tooltip" data-placement="top"
+                                title="Aktualna tabela rozgrywek">Tabela</a>
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "NextRound" ? "active" : "")">
+                        <a href="@Url.Action("NextRound")" data-toggle="tooltip" data-placement="top"
+                                title="Predykcja następnej kolejki rozgrywek">Predykcja</a>
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "H2H" ? "active" : "")">
+                        <a href="@Url.Action("H2H")" data-toggle="tooltip" data-placement="top"
+                                title="Porównanie bezpośrednie meczów miedzy dwoma drużynami">Porównaj kluby</a>
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "TeamStatistics" ? "active" : "")">
+                        <a href="@Url.Action("TeamStatistics")" data-toggle="tooltip" data-placement="top"
+                                title="Informacje o konkretnej drużynie">Statystyki klubowe</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+    
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>System predykcji - wersja beta. Autorzy systemu predykcji: Asztemborski.D, Dąbrowski.J, Szotowicz.M</p>
+            <p align="center">System predykcji &copy; 2017 Pre-Scores. Autorzy systemu: Asztemborski, Dąbrowski, Szotowicz</p>
         </footer>
     </div>
 

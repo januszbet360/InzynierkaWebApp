@@ -23,19 +23,29 @@
     </table>
 </div>
 
-<h2 style="text-align:center">Kolejka: @ViewBag.selectedRound  Skuteczność: @ViewBag.success % </h2>
-
+<h2 style="text-align: center">
+    Kolejka: @ViewBag.selectedRound
+    @if (@ViewBag.success != null)
+    {
+        <text>
+             &emsp; Skuteczność: @ViewBag.success%
+            <span class="glyphicon glyphicon-info-sign icon" data-toggle="tooltip" data-placement="top"
+                  title="Zielony kolor wiersza oznacza poprawne wskazanie rozstrzygnięcia, pogrubienie - poprawnie wypredykowany wynik"></span>
+        </text>
+}
+</h2>
+<br/>
 <main>
    <div class="table-responsive">
-        <table class="table table-stripped">
-            <thead>
-            <tr>
-                <td>Data</td>
-                <td>Gospodarze</td>
-                <td>Goście</td>
-                <td>Wynik</td>
-                <td>Predykcja</td>
-            </tr>
+        <table class="table table-stripped table-bordered " >
+            <thead >
+                <tr class="headTable">
+                    <th>Data</th>
+                    <th>Gospodarze</th>
+                    <th>Goście</th>
+                    <th>Wynik</th>
+                    <th >Predykcja</th>
+                </tr>
             </thead>
             <tbody>
             @foreach (var row in Model)

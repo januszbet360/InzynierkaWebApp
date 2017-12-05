@@ -5,7 +5,8 @@
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
 
-    <h2 align="center">Statystyki zespołowe</h2>
+<h2 align="center">Statystyki klubowe</h2>
+<br/>
 @{
     var teamsList = new List<SelectListItem>();
     foreach (var x in @ViewBag.teams)
@@ -23,10 +24,12 @@
     {
         <div align="center">
             @Html.DropDownListFor(m => m.Team1, teamsList, "Wybierz zespół  ", new { @class = "selectpicker" })
+            &ensp; &ensp;  
             @Html.DropDownListFor(m => m.SeasonSince, availableSeasons, "Wybierz sezon początkowy", new { @class = "selectpicker" })
+            &ensp;-&ensp;  
             @Html.DropDownListFor(m => m.SeasonTo, availableSeasons, "Wybierz sezon końcowy", new { @class = "selectpicker" })
-
-            <input type="submit" value="Pokaż">
+            &emsp;
+            <input type="submit" class="btn btn-success" value="Pokaż">
         </div>
     }
 
@@ -44,9 +47,9 @@
         var successResult = (float)@ViewBag.rightResultPrediction / (float)@ViewBag.matchesPredicted *100;
         var successScore = (float)@ViewBag.rightScoresPrediction / (float)@ViewBag.matchesPredicted *100;
 
-         <p align="center">Ilość meczów z predykcją dla wybranej drużyny w wybranym okresie: @ViewBag.matchesPredicted</p>
-        <p align="center">Ilość meczów z poprawnym wskazaniem rozstrzygnięcia: @ViewBag.rightResultPrediction (@successResult %)</p>
-        <p align="center">Ilość meczów z poprawnym wynikiem: @ViewBag.rightScoresPrediction (@successScore %)</p>
+         <p align="center">Liczba meczów z predykcją dla wybranej drużyny w wybranym okresie: @ViewBag.matchesPredicted</p>
+        <p align="center">Liczba meczów z poprawnym wskazaniem rozstrzygnięcia: @ViewBag.rightResultPrediction (@successResult%)</p>
+        <p align="center">Liczba meczów z poprawnym wynikiem: @ViewBag.rightScoresPrediction (@successScore%)</p>
 
 
     }
@@ -108,7 +111,7 @@
 
 
                                 <tbody>
-                                <tr class="clickable bg-info" data-toggle="collapse" id="@rowNumber.ToString()" data-target=".@rowNumber.ToString()">
+                                <tr role="button" class="clickable bg-info" data-toggle="collapse" id="@rowNumber.ToString()" data-target=".@rowNumber.ToString()">
                                     <td>@row.Date.ToString("dd.MM.yyy")</td>
                                     <td>@row.Season</td>
                                     <td>@row.HomeTeam</td>
@@ -120,7 +123,7 @@
                                     <td colspan="5">
                                         <table class="table  table-responsive table-hover matches">
                                             <tr class="active">
-                                                <td>#</td>
+                                                <td></td>
                                                 <td>@row.HomeTeam</td>
                                                 <td>@row.AwayTeam</td>
                                             </tr>
