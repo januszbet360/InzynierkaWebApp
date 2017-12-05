@@ -207,22 +207,25 @@ namespace FootballPredictor.Controllers
                 var data = new List<MainPageModel>();
                 if (selectedRound == -1) selectedRound = actualRound;
                 int success = 0; // zmienic liczneie skutecznosci na jakis wzor
-                 if (selectedRound <= actualRound)
+                 
                     foreach (var x in ctx.Matches.Where(d => (d.Matchweek == selectedRound) && d.Season.Equals(actualSeason)))
-                    {                  
+                    {
+                        if (selectedRound <= actualRound)
+                        {
                             var homeGoals = ctx.Scores.FirstOrDefault(w => w.MatchId == x.Id).HomeGoals;
                             var awayGoals = ctx.Scores.FirstOrDefault(w => w.MatchId == x.Id).AwayGoals;
-                            data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted, x.AwayGoalsPredicted, awayGoals, homeGoals, x.Date.Date));
-                        bool rightPredicted = CompareScores(homeGoals, awayGoals, x.HomeGoalsPredicted, x.AwayGoalsPredicted);
-                        if (rightPredicted) success += 10;
-                    }
-                else
-                {
-                    foreach (var x in ctx.Matches.Where(d => d.Matchweek == selectedRound).Take(10))
-                    {                     
-                        data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted, x.AwayGoalsPredicted, null, null, x.Date.Date));
-                    }
+                            data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted,
+                                x.AwayGoalsPredicted, awayGoals, homeGoals, x.Date.Date));
+                            bool rightPredicted = CompareScores(homeGoals, awayGoals, x.HomeGoalsPredicted,
+                                x.AwayGoalsPredicted);
+                            if (rightPredicted) success += 10;
+                        }
+                        else
+                        {
+                             data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted, x.AwayGoalsPredicted, null, null, x.Date.Date));
+                        }
                 }
+               
                 ViewBag.actualRound = actualRound;
                 ViewBag.selectedRound = selectedRound;
                 if(selectedRound <= actualRound) ViewBag.success = success;
