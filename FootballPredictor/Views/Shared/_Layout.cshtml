@@ -39,8 +39,7 @@
             font-weight:bold; 
         }
         .matches td {
-            font-weight: initial;
-            background-color:lightgrey;
+            font-weight: initial;          
         }
       
 
@@ -157,11 +156,11 @@
                     </li>
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "H2H" ? "active" : "")">
                         <a href="@Url.Action("H2H")" data-toggle="tooltip" data-placement="top"
-                                title="Porównanie bezpośrednie meczów miedzy dwoma drużynami">Porównaj kluby</a>
+                                title="Porównanie bezpośrednie meczów miedzy dwoma zespołami">Porównaj zespoły</a>
                     </li>
                     <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "TeamStatistics" ? "active" : "")">
                         <a href="@Url.Action("TeamStatistics")" data-toggle="tooltip" data-placement="top"
-                                title="Informacje o konkretnej drużynie">Statystyki klubowe</a>
+                                title="Informacje o konkretnym zespole">Statystyki zespołu</a>
                     </li>
 
                 </ul>

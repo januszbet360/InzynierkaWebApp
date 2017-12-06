@@ -5,7 +5,7 @@
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
 
-<h2 align="center">Statystyki klubowe</h2>
+<h2 align="center">Statystyki zespołu</h2>
 <br/>
 @{
     var teamsList = new List<SelectListItem>();
@@ -88,8 +88,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <table class="table  table-responsive table-hover">
-                        <thead>
+                    <table class="table  table-responsive table-bordered">
+                        <thead class="headTable">
                         <tr>
                             <th>Data</th>
                             <th>Sezon</th>
@@ -121,39 +121,39 @@
                                 <tr class="collapsedRow collapse @rowNumber.ToString()">
                                    
                                     <td colspan="5">
-                                        <table class="table  table-responsive table-hover matches">
-                                            <tr class="active">
+                                        <table class="table  table-responsive table-bordered matches">
+                                            <tr class="bg-warning">
                                                 <td></td>
                                                 <td>@row.HomeTeam</td>
                                                 <td>@row.AwayTeam</td>
                                             </tr>
                                             <tr>
-                                                <td>Strzały</td>
+                                                <td class="active">Strzały</td>
                                                 <td>@row.HomeShots</td>
                                                 <td>@row.AwayShots</td>
                                             </tr>
                                             <tr>
-                                                <td>Strzały celne</td>
+                                                <td class="active">Strzały celne</td>
                                                 <td>@row.HomeShotsOnTarget</td>
                                                 <td>@row.AwayShotsOnTarget</td>
                                             </tr>
                                             <tr>
-                                                <td>Rzuty rożne</td>
+                                                <td class="active">Rzuty rożne</td>
                                                 <td>@row.HomeCorners</td>
                                                 <td>@row.AwayCorners</td>
                                             </tr>
                                             <tr>
-                                                <td>Faule</td>
+                                                <td class="active">Faule</td>
                                                 <td>@row.HomeFouls</td>
                                                 <td>@row.AwayFouls</td>
                                             </tr>
                                             <tr>
-                                                <td>Żółte kartki</td>
+                                                <td class="active">Żółte kartki</td>
                                                 <td>@row.HomeYellowCards</td>
                                                 <td>@row.AwayYellowCards</td>
                                             </tr>
                                             <tr>
-                                                <td>Czerwone kartki</td>
+                                                <td class="active">Czerwone kartki</td>
                                                 <td>@row.HomeRedCards</td>
                                                 <td>@row.AwayRedCards</td>
                                             </tr>
