@@ -4,26 +4,39 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@{
+    if (@ViewBag.round > 38)
+    {
+        <div >
+            <a >
+                <img src="~/Images/KoniecSezonu.jpg" class="img-responsive endSeason img-rounded" />
+            </a>
+        </div>
+        <br/><br/>
+    }
+    else
+    {
+        <main>
+            <h2 align="center"><b>Predykcja dla kolejki:</b> @ViewBag.round</h2>
+            <br/>
+            <table class="table table-stripped table-bordered">
+                <thead>
+                <tr class="headTable">
+                    <th>Data</th>
+                    <th>Gospodarze</th>
+                    <th>Goście</th>
+                    <th data-toggle="tooltip" data-placement="top"
+                        title="Wypredykowane wyniki są aktualizowane co kolejkę">Predykcja</th>
+                </tr>
 
-<main>
-    <h2 align="center"><b>Predykcja dla kolejki:</b> @ViewBag.round</h2>
-    <br/>
-    <table class="table table-stripped table-bordered">
-        <thead>
-        <tr class="headTable">
-            <th>Data</th>
-            <th>Gospodarze</th>
-            <th>Goście</th>
-            <th data-toggle="tooltip" data-placement="top" 
-                    title="Wypredykowane wyniki są aktualizowane co kolejkę">Predykcja</th>
-        </tr>
-        
-        </thead>
-        <tbody>
-            @foreach (var row in Model)
-            {
-                <tr class="predictionRow"><td>@row.Date.ToString("dd.MM.yyy")</td><td>@row.HomeTeam</td><td>@row.AwayTeam</td><td>@row.HomeScorePrediction : @row.AwayScorePrediction</td></tr>
-            }
-        </tbody>
-    </table>
-</main>
+                </thead>
+                <tbody>
+                @foreach (var row in Model)
+                {
+                    <tr class="predictionRow"><td>@row.Date.ToString("dd.MM.yyy")</td><td>@row.HomeTeam</td><td>@row.AwayTeam</td><td>@row.HomeScorePrediction : @row.AwayScorePrediction</td></tr>
+                }
+                </tbody>
+            </table>
+        </main>
+    }
+}

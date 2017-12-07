@@ -1,87 +1,89 @@
-﻿   @using System.Text  
- @model FootballPredictor.Models.TeamsInfoModel
+﻿@using System.Text
+@model FootballPredictor.Models.TeamsInfoModel
 
-    @{
-        Layout = "~/Views/Shared/_Layout.cshtml";
-    }
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 <h2 align="center">Statystyki zespołu</h2>
-<br/>
+<br />
 @{
     var teamsList = new List<SelectListItem>();
     foreach (var x in @ViewBag.teams)
     {
-        teamsList.Add(new SelectListItem() { Text = x.ToString(), Value = x.ToString() });
+        teamsList.Add(new SelectListItem() {Text = x.ToString(), Value = x.ToString()});
     }
 
     var availableSeasons = new List<SelectListItem>();
     foreach (var x in @ViewBag.allSeasons)
     {
-        availableSeasons.Add(new SelectListItem() { Text = x.ToString(), Value = x.ToString() });
+        availableSeasons.Add(new SelectListItem() {Text = x.ToString(), Value = x.ToString()});
     }
 
     using (@Html.BeginForm("TeamStatistics", "Home", FormMethod.Post))
     {
         <div align="center">
-            @Html.DropDownListFor(m => m.Team1, teamsList, "Wybierz zespół  ", new { @class = "selectpicker" })
-            &ensp; &ensp;  
-            @Html.DropDownListFor(m => m.SeasonSince, availableSeasons, "Wybierz sezon początkowy", new { @class = "selectpicker" })
-            &ensp;-&ensp;  
-            @Html.DropDownListFor(m => m.SeasonTo, availableSeasons, "Wybierz sezon końcowy", new { @class = "selectpicker" })
+            @Html.DropDownListFor(m => m.Team1, teamsList, "Wybierz zespół  ", new {@class = "selectpicker"})
+            &ensp; &ensp;
+            @Html.DropDownListFor(m => m.SeasonSince, availableSeasons, "Wybierz sezon początkowy", new {@class = "selectpicker"})
+            &ensp;-&ensp;
+            @Html.DropDownListFor(m => m.SeasonTo, availableSeasons, "Wybierz sezon końcowy", new {@class = "selectpicker"})
             &emsp;
             <input type="submit" class="btn btn-success" value="Pokaż">
         </div>
     }
 
-    <br/><br/>
+    <br/>
+    <br/>
 
     if (@ViewBag.url != null)
     {
-        <div align="center" > <img src="@ViewBag.url" alt="" style="width: 20%;height: 20%"></div>
+        <div align="center"> <img src="@ViewBag.url" alt="" style="width: 20%; height: 20%">
+        </div>
     }
 
     <br/>
 
-    if (@ViewBag.matchesPredicted  != null && @ViewBag.rightResultPrediction != null && @ViewBag.rightScoresPrediction != null)
+    if (@ViewBag.matchesPredicted != null && @ViewBag.rightResultPrediction != null && @ViewBag.rightScoresPrediction != null)
     {
-        var successResult = (float)@ViewBag.rightResultPrediction / (float)@ViewBag.matchesPredicted *100;
-        var successScore = (float)@ViewBag.rightScoresPrediction / (float)@ViewBag.matchesPredicted *100;
+        var successResult = (float) @ViewBag.rightResultPrediction / (float) @ViewBag.matchesPredicted * 100;
+        var successScore = (float) @ViewBag.rightScoresPrediction / (float) @ViewBag.matchesPredicted * 100;
 
-         <p align="center">Liczba meczów z predykcją dla wybranej drużyny w wybranym okresie: @ViewBag.matchesPredicted</p>
+        <p align="center">Liczba meczów z predykcją dla wybranej drużyny w wybranym okresie: @ViewBag.matchesPredicted</p>
         <p align="center">Liczba meczów z poprawnym wskazaniem rozstrzygnięcia: @ViewBag.rightResultPrediction (@successResult%)</p>
         <p align="center">Liczba meczów z poprawnym wynikiem: @ViewBag.rightScoresPrediction (@successScore%)</p>
 
 
     }
 
-    <br />
+    <br/>
 
     if (@ViewBag.SeasonStats != null)
     {
         <table class="table table-stripped table-bordered" style="text-align: center">
             <thead>
-                <tr class="info">
-                    <th>Sezon</th>
-                    <th>Nazwa</th>
-                    <th>Mecze</th>
-                    <th>Punkty</th>
-                    <th>Wygranych</th>
-                    <th>Remisów</th>
-                    <th>Porażek</th>
-                    <th>Strzelonych</th>
-                    <th>Straconych</th>
-                    <th>Bilans</th>
-                </tr>
-            </thead>    
+            <tr class="info">
+                <th>Sezon</th>
+                <th>Nazwa</th>
+                <th>Mecze</th>
+                <th>Punkty</th>
+                <th>Wygranych</th>
+                <th>Remisów</th>
+                <th>Porażek</th>
+                <th>Strzelonych</th>
+                <th>Straconych</th>
+                <th>Bilans</th>
+            </tr>
+            </thead>
             <tbody>
-                @foreach (var row in ViewBag.SeasonStats)
-                {
-                    int difference = @row.GoalsShotted - @row.GoalsLost;
-                    <tr ><td>@row.Season</td><td>@row.Name</td><td>@row.PlayedMatches</td><td>@row.Points</td><td>@row.Won</td><td>@row.Drawn</td><td>@row.Lost</td><td>@row.GoalsShotted</td><td>@row.GoalsLost</td><td>@difference</td></tr>
-                }
+            @foreach (var row in ViewBag.SeasonStats)
+            {
+                int difference = @row.GoalsShotted - @row.GoalsLost;
+                <tr><td>@row.Season</td><td>@row.Name</td><td>@row.PlayedMatches</td><td>@row.Points</td><td>@row.Won</td><td>@row.Drawn</td><td>@row.Lost</td><td>@row.GoalsShotted</td><td>@row.GoalsLost</td><td>@difference</td></tr>
+            }
             </tbody>
         </table>
-     }
+    }
 
     if (ViewBag.Matches != null)
     {
@@ -98,7 +100,7 @@
                             <th>Wynik</th>
                         </tr>
                         </thead>
-                        
+
                         @{
                             int counter = 0;
                             foreach (var row in ViewBag.Matches)
@@ -119,7 +121,7 @@
                                     <td>@row.HomeGoals : @row.AwayGoals</td>
                                 </tr>
                                 <tr class="collapsedRow collapse @rowNumber.ToString()">
-                                   
+
                                     <td colspan="5">
                                         <table class="table  table-responsive table-bordered matches">
                                             <tr class="bg-warning">
@@ -158,7 +160,7 @@
                                                 <td>@row.AwayRedCards</td>
                                             </tr>
                                         </table>
-                                    </td>                
+                                    </td>
                                 </tr>
                                 </tbody>
                             }
@@ -167,6 +169,6 @@
                 </div>
             </div>
         </div>
-      
+
     }
 }

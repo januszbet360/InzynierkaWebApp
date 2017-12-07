@@ -33,7 +33,7 @@ namespace FootballPredictor.Controllers
                 {
                     data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted, x.AwayGoalsPredicted, null, null, x.Date.Date));
                 }
-                ViewBag.round = actualRound + 1;
+                ViewBag.round = 39;
                 return View(data);
             }
         }
@@ -47,19 +47,20 @@ namespace FootballPredictor.Controllers
         {
             using (var ctx = new FootballEntities())
             {
-               var actualSeason = SeasonHelper.GetCurrentSeason(DateTime.UtcNow);
-                var teams = new List< TeamModel>();
+                var actualSeason = SeasonHelper.GetCurrentSeason(DateTime.UtcNow);
+                var teams = new List<TeamModel>();
                 var position = 1;
                 foreach (var singleTeam in ctx.FullStatistics.Where(e => e.Season == actualSeason).OrderByDescending(e => e.Points))
-                { var name = singleTeam.Team.FullName;
+                {
+                    var name = singleTeam.Team.FullName;
                     var team = new TeamModel(name, position++, singleTeam.MatchesPlayed, singleTeam.Points, singleTeam.MatchesWon,
                         singleTeam.MatchesDrawn, singleTeam.MatchesLost, singleTeam.GoalsScored, singleTeam.GoalsLost,
-                        singleTeam.GoalsScored - singleTeam.GoalsLost,null);
+                        singleTeam.GoalsScored - singleTeam.GoalsLost, null);
                     teams.Add(team);
-                }               
-            return View(teams);
+                }
+                return View(teams);
             }
-                
+
         }
 
         public ActionResult H2H(TeamsInfoModel model)
@@ -150,9 +151,9 @@ namespace FootballPredictor.Controllers
                 ViewBag.rightScoresPrediction = statsOfPrediction.Item3;
 
 
-                var teamId = ctx.Teams.FirstOrDefault(e => e.FullName.Equals(model.Team1)).Id;   
+                var teamId = ctx.Teams.FirstOrDefault(e => e.FullName.Equals(model.Team1)).Id;
                 //dodac liczenia miejsca w tabeli
-                foreach (var singleTeam in  ctx.FullStatistics.Where(e => e.TeamId == teamId).OrderByDescending(d=>d.Season))
+                foreach (var singleTeam in ctx.FullStatistics.Where(e => e.TeamId == teamId).OrderByDescending(d => d.Season))
                 {
                     if (!SeasonsComapare(model.SeasonSince, model.SeasonTo, singleTeam.Season)) continue;
                     var name = singleTeam.Team.FullName;
@@ -170,20 +171,20 @@ namespace FootballPredictor.Controllers
                 var actualRound = ctx.Scores.Count(e => e.Match.Season.Equals(season)) / 10; //!!!!zmienic pozniej 
 
                 foreach (var match in ctx.Matches.Where(e => ((e.HomeId == teamId || e.AwayId == teamId) && (e.Matchweek <= actualRound || e.Season != season))
-                                                        && DateTime.Compare(e.Date, today) <0).OrderByDescending(d=>d.Date))
+                                                        && DateTime.Compare(e.Date, today) < 0).OrderByDescending(d => d.Date))
                 {
                     if (!SeasonsComapare(model.SeasonSince, model.SeasonTo, match.Season)) continue;
                     var homeTeam = ctx.Teams.First(q => q.Id == match.HomeId).FullName;
                     var awayTeam = ctx.Teams.First(q => q.Id == match.AwayId).FullName;
                     var seasonOfMatch = GetCurrentSeason(match.Date);
                     var stats = ctx.Scores.FirstOrDefault(q => q.MatchId == match.Id);
-                    
+
                     singleMatchStats.Add(new MatchStatisticsModel(homeTeam, awayTeam, match.Date,
-                        match.AwayGoalsPredicted, match.HomeGoalsPredicted, match.Matchweek,stats.HomeGoals,stats.AwayGoals,
-                        stats.HomeShots,stats.AwayShots,stats.HomeShotsOnTarget,stats.AwayShotsOnTarget,stats.HomeCorners,
-                        stats.AwayCorners,stats.HomeFouls,stats.AwayFouls,stats.HomeYellowCards,stats.AwayYellowCards,
-                        stats.HomeRedCards,stats.AwayRedCards,stats.HalfTimeHomeGoals,stats.HalfTimeAwayGoals,
-                        stats.Referee, seasonOfMatch));                 
+                        match.AwayGoalsPredicted, match.HomeGoalsPredicted, match.Matchweek, stats.HomeGoals, stats.AwayGoals,
+                        stats.HomeShots, stats.AwayShots, stats.HomeShotsOnTarget, stats.AwayShotsOnTarget, stats.HomeCorners,
+                        stats.AwayCorners, stats.HomeFouls, stats.AwayFouls, stats.HomeYellowCards, stats.AwayYellowCards,
+                        stats.HomeRedCards, stats.AwayRedCards, stats.HalfTimeHomeGoals, stats.HalfTimeAwayGoals,
+                        stats.Referee, seasonOfMatch));
                 }
 
                 ViewBag.Matches = singleMatchStats;
@@ -193,42 +194,43 @@ namespace FootballPredictor.Controllers
                 ViewBag.url = url;
 
                 return View();
-                
+
             }
         }
 
-      
 
-        public ActionResult Schedule(int selectedRound  = -1) {
+
+        public ActionResult Schedule(int selectedRound = -1)
+        {
             using (var ctx = new FootballEntities())
-            {            
+            {
                 var actualSeason = GetCurrentSeason(DateTime.Today);
-                var actualRound = ctx.Scores.Count(e =>e.Match.Season.Equals(actualSeason))/10; //!!!!zmienic pozniej 
+                var actualRound = ctx.Scores.Count(e => e.Match.Season.Equals(actualSeason)) / 10; //!!!!zmienic pozniej 
                 var data = new List<MainPageModel>();
                 if (selectedRound == -1) selectedRound = actualRound;
                 int success = 0; // zmienic liczneie skutecznosci na jakis wzor
-                 
-                    foreach (var x in ctx.Matches.Where(d => (d.Matchweek == selectedRound) && d.Season.Equals(actualSeason)))
+
+                foreach (var x in ctx.Matches.Where(d => (d.Matchweek == selectedRound) && d.Season.Equals(actualSeason)))
+                {
+                    if (selectedRound <= actualRound)
                     {
-                        if (selectedRound <= actualRound)
-                        {
-                            var homeGoals = ctx.Scores.FirstOrDefault(w => w.MatchId == x.Id).HomeGoals;
-                            var awayGoals = ctx.Scores.FirstOrDefault(w => w.MatchId == x.Id).AwayGoals;
-                            data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted,
-                                x.AwayGoalsPredicted, awayGoals, homeGoals, x.Date.Date));
-                            bool rightPredicted = CompareScores(homeGoals, awayGoals, x.HomeGoalsPredicted,
-                                x.AwayGoalsPredicted);
-                            if (rightPredicted) success += 10;
-                        }
-                        else
-                        {
-                             data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted, x.AwayGoalsPredicted, null, null, x.Date.Date));
-                        }
+                        var homeGoals = ctx.Scores.FirstOrDefault(w => w.MatchId == x.Id).HomeGoals;
+                        var awayGoals = ctx.Scores.FirstOrDefault(w => w.MatchId == x.Id).AwayGoals;
+                        data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted,
+                            x.AwayGoalsPredicted, awayGoals, homeGoals, x.Date.Date));
+                        bool rightPredicted = CompareScores(homeGoals, awayGoals, x.HomeGoalsPredicted,
+                            x.AwayGoalsPredicted);
+                        if (rightPredicted) success += 10;
+                    }
+                    else
+                    {
+                        data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted, x.AwayGoalsPredicted, null, null, x.Date.Date));
+                    }
                 }
-               
+
                 ViewBag.actualRound = actualRound;
                 ViewBag.selectedRound = selectedRound;
-                if(selectedRound <= actualRound) ViewBag.success = success;
+                if (selectedRound <= actualRound) ViewBag.success = success;
                 return View(data.Distinct());
             }
         }
@@ -249,7 +251,7 @@ namespace FootballPredictor.Controllers
             }
         }
 
-        public  string GetCurrentSeason(DateTime date)
+        public string GetCurrentSeason(DateTime date)
         {
             StringBuilder sb = new StringBuilder();
 
