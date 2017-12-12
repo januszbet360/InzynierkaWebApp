@@ -17,7 +17,6 @@ namespace FootballPredictor.Controllers
         // GET: Home
         public ActionResult Index()
         {
-
             return View();
         }
 
@@ -33,12 +32,12 @@ namespace FootballPredictor.Controllers
                 {
                     data.Add(new MainPageModel(x.Team1.FullName, x.Team.FullName, x.HomeGoalsPredicted, x.AwayGoalsPredicted, null, null, x.Date.Date));
                 }
-                ViewBag.round = 39;
+                ViewBag.round = actualRound + 1;
                 return View(data);
             }
         }
 
-        public ActionResult About()
+        public ActionResult About() // usunac 
         {
             return View();
         }
